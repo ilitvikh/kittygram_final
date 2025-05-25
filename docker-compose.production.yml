@@ -7,12 +7,12 @@ volumes:
 
 services:
   db:
-    image: postgres:13
+    image: postgres:13.10
     env_file: .env
     volumes:
-      - pg_data:/var/lib/postgresql/data
+      - pg_data_production:/var/lib/postgresql/data
   backend:
-    build: ./backend/
+    image: ilitvih/kittygram_backend # Качаем с Docker Hub
     env_file: .env
     volumes:
       - static:/backend_static
@@ -20,13 +20,13 @@ services:
     depends_on:
       - db
   frontend:
-    env_file: .env
+    image: ilitvih/kittygram_frontend  # Качаем с Docker Hub
     build: ./frontend/
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
   gateway:
-    build: ./nginx/
+    image: ilitvih/kittygram_gateway  # Качаем с Docker Hub
     env_file: .env
     ports:
       - 9000:80
