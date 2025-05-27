@@ -21,7 +21,6 @@ services:
       - db
   frontend:
     image: ilitvih/kittygram_frontend  # Качаем с Docker Hub
-    build: ./frontend/
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
