@@ -171,7 +171,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message:|
-      🚀 Деплой успешно выполнен!
+         Деплой успешно выполнен!
          Автор: ${{ github.actor }}
          Коммит: ${{ github.event.commits[0].message }}
          Ссылка: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
