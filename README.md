@@ -1,6 +1,8 @@
+[![Main Kittygram workflow](https://github.com/ilitvikh/kittygram_final/actions/workflows/main.yml/badge.svg)](https://github.com/ilitvikh/kittygram_final/actions/workflows/main.yml)
+
 # Kittygram
 
-## Блог для котов
+## Блог для владельцев котов
 
 ### Возможности:
 - Информация о котах с изображениями
